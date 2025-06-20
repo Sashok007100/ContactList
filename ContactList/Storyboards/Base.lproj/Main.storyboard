@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,6 +33,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="h9g-t6-EqO" kind="show" id="e4O-0Y-hLo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,6 +48,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evb-Jm-LSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="489" y="-68"/>
+        </scene>
+        <!--Contact Detail View Controller-->
+        <scene sceneID="YcH-kk-oDD">
+            <objects>
+                <viewController id="h9g-t6-EqO" customClass="ContactDetailViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jcQ-RY-QYf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="PH2-kI-lMF">
+                                <rect key="frame" x="16" y="132.5" width="288" height="62"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTz-kh-giK">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfI-m9-Byq">
+                                        <rect key="frame" x="0.0" y="41.5" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pLg-Qo-Wpe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PH2-kI-lMF" firstAttribute="top" secondItem="pLg-Qo-Wpe" secondAttribute="top" constant="20" id="gam-h3-PBt"/>
+                            <constraint firstItem="PH2-kI-lMF" firstAttribute="leading" secondItem="pLg-Qo-Wpe" secondAttribute="leading" constant="16" id="hva-aA-9EG"/>
+                            <constraint firstItem="pLg-Qo-Wpe" firstAttribute="trailing" secondItem="PH2-kI-lMF" secondAttribute="trailing" constant="16" id="qBy-Oi-kdx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DNh-M2-rxT"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="NfI-m9-Byq" id="4FD-oj-Zu0"/>
+                        <outlet property="phoneLabel" destination="nTz-kh-giK" id="NMT-Iz-sjJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30U-97-qZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="-69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AKa-14-kdB">

@@ -4,7 +4,7 @@
 //
 //  Created by Alexandr Artemov (Mac Mini) on 19.06.2025.
 //
-class DataStore {
+final class DataStore {
     static let shared = DataStore()
     
     let names = [

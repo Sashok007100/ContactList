@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ContactsTableViewController: UITableViewController {
-
+final class ContactsTableViewController: UITableViewController {
+    
     private let mock = Person.getMock()
     
     override func viewDidLoad() {

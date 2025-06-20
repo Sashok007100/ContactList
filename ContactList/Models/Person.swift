@@ -17,39 +17,27 @@ struct Person {
     static func getMock() -> [Person] {
         var contacts: [Person] = []
         
-        var availableNames = DataStore.names
-        var availableSurnames = DataStore.surnames
-        var availablePhones = DataStore.phoneNumbers
-        var availableEmails = DataStore.emails
+        let dataStore = DataStore.shared
         
         let count = min(
-            availableNames.count,
-            availableSurnames.count,
-            availablePhones.count,
-            availableEmails.count
+            dataStore.names.count,
+            dataStore.surnames.count,
+            dataStore.phone.count,
+            dataStore.emails.count
         )
         
-        for _ in 0...count {
-            guard
-                let name = availableNames.randomElement(),
-                let surname = availableSurnames.randomElement(),
-                let phone = availablePhones.randomElement(),
-                let email = availableEmails.randomElement()
-            else {
-                break
-            }
-            
-            availableNames.removeAll { $0 == name }
-            availableSurnames.removeAll { $0 == surname }
-            availablePhones.removeAll { $0 == phone }
-            availableEmails.removeAll { $0 == email }
-            
+        let names = dataStore.names.shuffled()
+        let surnames = dataStore.surnames.shuffled()
+        let phone = dataStore.phone.shuffled()
+        let emails = dataStore.emails.shuffled()
+        
+        for index in 0..<count {
             contacts.append(
                 Person(
-                    name: name,
-                    surname: surname,
-                    phone: phone,
-                    email: email
+                    name: names[index],
+                    surname: surnames[index],
+                    phone: phone[index],
+                    email: emails[index]
                 )
             )
         }

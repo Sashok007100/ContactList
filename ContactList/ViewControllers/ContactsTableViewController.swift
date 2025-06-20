@@ -15,6 +15,17 @@ final class ContactsTableViewController: UITableViewController {
         super.viewDidLoad()
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let indexPath = tableView.indexPathForSelectedRow,
+            let detailVC = segue.destination as? ContactDetailViewController
+        else {
+            return
+        }
+        
+        detailVC.mock = mock[indexPath.row]
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -33,4 +44,3 @@ extension ContactsTableViewController {
         return cell
     }
 }
-

@@ -12,6 +12,8 @@ final class ContactDetailViewController: UIViewController {
     @IBOutlet var phoneLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     
+    var mock: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

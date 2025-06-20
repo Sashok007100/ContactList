@@ -11,11 +11,6 @@ final class ContactsTableViewController: UITableViewController {
     
     private let mock = Person.getMock()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard
             let indexPath = tableView.indexPathForSelectedRow,

@@ -5,7 +5,9 @@
 //  Created by Alexandr Artemov (Mac Mini) on 19.06.2025.
 //
 class DataStore {
-    static let names = [
+    static let shared = DataStore()
+    
+    let names = [
         "Александр",
         "Иван",
         "Дмитрий",
@@ -23,7 +25,7 @@ class DataStore {
         "Константин"
     ]
 
-    static let surnames = [
+    let surnames = [
         "Иванов",
         "Петров",
         "Соколов",
@@ -41,7 +43,7 @@ class DataStore {
         "Беляев"
     ]
 
-    static let phoneNumbers = [
+    let phone = [
         "+7 (901) 123-45-67",
         "+7 (902) 234-56-78",
         "+7 (903) 345-67-89",
@@ -59,7 +61,7 @@ class DataStore {
         "+7 (915) 567-89-00"
     ]
 
-    static let emails = [
+    let emails = [
         "user1974@mail.ru",
         "alpha_x9@yandex.ru",
         "cool321@gmail.com",

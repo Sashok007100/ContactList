@@ -17,6 +17,8 @@ final class ContactDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.title = mock.fullName
+        phoneLabel.text = "Phone: \(mock.phone)"
+        emailLabel.text = "Email: \(mock.email)"
     }
-    
 }

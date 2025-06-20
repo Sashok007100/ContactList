@@ -9,6 +9,8 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
 
+    private let mock = Person.getMock()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

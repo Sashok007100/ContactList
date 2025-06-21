@@ -7,23 +7,19 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
-
+final class TabBarController: UITabBarController {
+    
+    let mock = Person.getMock()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        viewControllers?.forEach { viewController in
+            if let contactTableVC = viewController as? ContactsTableViewController {
+                contactTableVC.mock = mock
+            } else if let sectionsTableVC = viewController as? SectionsTableViewController {
+                sectionsTableVC.mock = mock
+            }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

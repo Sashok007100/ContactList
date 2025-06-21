@@ -11,10 +11,10 @@ final class SectionsTableViewController: UITableViewController {
     
     var mock: [Person]!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//    }
     
     // MARK: - UITableViewDataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,9 +30,11 @@ final class SectionsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactDetailCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "contactDetailCell",
+            for: indexPath
+        )
         var config = cell.defaultContentConfiguration()
-        
         
         if indexPath.row == 0 {
             config.image = UIImage(systemName: "phone")

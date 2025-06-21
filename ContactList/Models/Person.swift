@@ -14,6 +14,10 @@ struct Person {
         "\(name) \(surname)"
     }
     
+    var rows: [String] {
+        [phone, email]
+    }
+    
     static func getMock() -> [Person] {
         var contacts: [Person] = []
         

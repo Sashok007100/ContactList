@@ -11,11 +11,6 @@ final class SectionsTableViewController: UITableViewController {
     
     var mock: [Person]!
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//    }
-    
     // MARK: - UITableViewDataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
         mock.count

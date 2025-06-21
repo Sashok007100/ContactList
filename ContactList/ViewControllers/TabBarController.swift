@@ -14,12 +14,17 @@ final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViewControllers()
+    }
+    
+    private func setupViewControllers() {
         viewControllers?.forEach { viewController in
-            if let contactTableVC = viewController as? ContactsTableViewController {
-                contactTableVC.mock = mock
-            } else if let sectionsTableVC = viewController as? SectionsTableViewController {
-                sectionsTableVC.mock = mock
-            }
+            let navigationVC = viewController as? UINavigationController
+            let contactTableVC = navigationVC?.topViewController as? ContactsTableViewController
+            let sectionsTableVC = navigationVC?.topViewController as? SectionsTableViewController
+            
+            contactTableVC?.mock = mock
+            sectionsTableVC?.mock = mock
         }
     }
 }

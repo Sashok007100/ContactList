@@ -18,7 +18,7 @@ final class SectionsTableViewController: UITableViewController {
     
     // MARK: - UITableViewDataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        mock.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

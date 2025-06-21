@@ -9,7 +9,7 @@ import UIKit
 
 final class ContactsTableViewController: UITableViewController {
     
-    private let mock = Person.getMock()
+    var mock: [Person]!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard

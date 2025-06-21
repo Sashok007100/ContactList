@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SectionsTableViewController: UITableViewController {
+final class SectionsTableViewController: UITableViewController {
     
     var mock: [Person]!
     
@@ -16,8 +16,7 @@ class SectionsTableViewController: UITableViewController {
         
     }
     
-    // MARK: - Table view data source
-    
+    // MARK: - UITableViewDataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 0
     }

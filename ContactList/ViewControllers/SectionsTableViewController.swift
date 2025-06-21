@@ -46,3 +46,10 @@ final class SectionsTableViewController: UITableViewController {
         return cell
     }
 }
+
+// MARK: - UITableViewDelegate
+extension SectionsTableViewController {
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        false
+    }
+}

@@ -78,4 +78,6 @@ final class DataStore {
         "trackzone76@yandex.ru",
         "cybercat99@gmail.com"
     ]
+    
+    private init() {}
 }

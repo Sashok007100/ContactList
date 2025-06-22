@@ -9,7 +9,7 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     
-    let mock = Person.getMock()
+    private let mock = Person.getMock()
     
     override func viewDidLoad() {
         super.viewDidLoad()
